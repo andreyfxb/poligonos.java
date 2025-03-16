@@ -1,27 +1,37 @@
+
+package ado4.poligonos;
+
 import java.util.Scanner;
-
-public class Triangulo {
-
+public class TRIANGULO {
+    
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Informe o valor de A:");
-        int a = ler.nextInt();
+        // Leitura dos lados do triângulo
+        System.out.print("Digite o valor do lado A: ");
+        int A = scanner.nextInt();
+        System.out.print("Digite o valor do lado B: ");
+        int B = scanner.nextInt();
+        System.out.print("Digite o valor do lado C: ");
+        int C = scanner.nextInt();
 
-        System.out.println("Informe o valor de B:");
-        int b = ler.nextInt();
-
-        System.out.println("Informe o valor de C:");
-        int c = ler.nextInt();
-
-        if (a + b + c != 180) {
-            System.out.println("Não é um triângulo");
-        } else if (a == b && b == c) {
-            System.out.println("Triângulo Equilátero");
-        } else if (a != b && b != c && a != c) {
-            System.out.println("Triângulo Escaleno");
+        // Verifica se os valores formam um triângulo
+        if (A >= (B + C) || B >= (A + C) || C >= (A + B)) {
+            System.out.println("Não é um triângulo.");
         } else {
-            System.out.println("Triângulo Isósceles");
+            // Identifica o tipo de triângulo
+            if (A == B && B == C) {
+                System.out.println("Triângulo Equilátero (Todos os lados são iguais).");
+            } else if (A == B || A == C || B == C) {
+                System.out.println("Triângulo Isósceles (Dois lados são iguais).");
+            } else {
+                System.out.println("Triângulo Escaleno (Todos os lados são diferentes).");
+            }
         }
+
+        scanner.close();
     }
 }
+
+
+    
