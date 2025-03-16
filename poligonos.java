@@ -1,6 +1,8 @@
-import java.util.Scanner;
+package ado4.poligonos;
+ import java.util.Scanner;
 
-public class Poligonos {
+
+public class ADO4POLIGONOS {
     
     public static void main(String[]args){
         Scanner ler = new Scanner(System.in);
@@ -42,3 +44,6 @@ public class Poligonos {
 
     }
 }
+   
+       
+   
